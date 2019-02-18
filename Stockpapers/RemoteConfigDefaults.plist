@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>unsplash</key>
+	<string>{&quot;access_key&quot;: &quot;b58868807e67ad994e1ea7a8b08192bae739b4e54d0e6671727e4f565a9c03b7&quot;, &quot;secret_key&quot;: &quot;b357d25c92268770cd921dd3610b152491042844669dc2bbd0bf4857f3caacf3&quot;}</string>
+	<key>unsplash_collections</key>
+	<string>[{&quot;id&quot;:3644553,&quot;customTitle&quot;:&quot;Staff Picks&quot;,&quot;customDescription&quot;:&quot;Only the best&quot;}]</string>
+	<key>display_darkmode</key>
+	<true/>
+</dict>
+</plist>
