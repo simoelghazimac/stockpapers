@@ -7,7 +7,7 @@
 	- [New Features](#new-features)
 	- [Commits](#Commits)
 - [Building](#Building)
-- [Area you a webdeveloper](#website)?
+- [Area you a webdeveloper?](#website)
 - [License](#License)
 
 
@@ -33,7 +33,7 @@ If you want to add new features you're welcome! Please before start coding make 
 	- Follow-up commits for any review comments should be squashed. Do not include "Fixed PR comments", merge commits, or other "temporary" commits in pull requests.
 
 # Are you a webdeveloper?
-If you'd like to contribute but you're not a Swift developer you can always check the **Stockpapers** website repo and help with the website.
+If you'd like to contribute but you're not a Swift developer you can always check the **Stockpapers** [website][website-repo] repo and help with the [website][website-repo].
 
 > It absolutely needs a re-design...
 
@@ -61,3 +61,11 @@ If you'd like to contribute but you're not a Swift developer you can always chec
 # License
 This project is under [`GNU GPL 3.0`](LICENSE)
 
+# Related Repos
+- [Splash CLI](https://splash-cli.app?ref=github) - Beautiful wallpapers from Unsplash
+- [StockPapers Website][website-repo] - StockPapers('s) website
+
+
+
+[website]: https://stockpapers.app
+[website-repo]: https://github.com/Rawnly/stockpapers-website
