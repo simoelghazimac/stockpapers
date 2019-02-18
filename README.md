@@ -7,8 +7,9 @@
 	- [New Features](#new-features)
 	- [Commits](#Commits)
 - [Building](#Building)
+- [Area you a webdeveloper](#website)?
 - [License](#License)
-<!-- - [Screenshots](#screenshots) -->
+
 
 # 💡 The idea behind the app
 I made that app just for learn Swift development and best practice. Now I made this open-source because I thought that would be useful to someone that just like it has been for me.
@@ -30,6 +31,11 @@ If you want to add new features you're welcome! Please before start coding make 
 	- Each commit should have a single clear purpose. If a commit contains multiple unrelated changes, those changes should be split into separate commits.
 	- If a commit requires another commit to build properly, those commits should be squashed.
 	- Follow-up commits for any review comments should be squashed. Do not include "Fixed PR comments", merge commits, or other "temporary" commits in pull requests.
+
+# Are you a webdeveloper?
+If you'd like to contribute but you're not a Swift developer you can always check the **Stockpapers** website repo and help with the website.
+
+> It absolutely needs a re-design...
 
 # 🏗️ Build
 > ⚠️ **This project requires Xcode 10** ⚠️
