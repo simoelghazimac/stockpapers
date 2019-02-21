@@ -7,7 +7,7 @@
 	- [New Features](#new-features)
 	- [Commits](#Commits)
 - [Building](#Building)
-- [Area you a webdeveloper?](#website)
+- [Area you a WebDeveloper?](#website)
 - [License](#License)
 
 
@@ -31,6 +31,10 @@ If you want to add new features you're welcome! Please before start coding make 
 	- Each commit should have a single clear purpose. If a commit contains multiple unrelated changes, those changes should be split into separate commits.
 	- If a commit requires another commit to build properly, those commits should be squashed.
 	- Follow-up commits for any review comments should be squashed. Do not include "Fixed PR comments", merge commits, or other "temporary" commits in pull requests.
+
+> NOTE: Please create your own `GoogleServices-Info.plist` on Firebase, without this file the Run will fail.
+
+> NOTE: If you encounter a problem with BorignSSL Framework, please remove it from the frameworks folder and link the new one.
 
 # Are you a webdeveloper?
 If you'd like to contribute but you're not a Swift developer you can always check the **Stockpapers** [website][website-repo] repo and help with the [website][website-repo].
