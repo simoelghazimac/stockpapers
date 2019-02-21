@@ -2,3 +2,4 @@ Carthage
 .DS_Store
 assets
 Cartfile.resolved
+GoogleServices-Info.plist
