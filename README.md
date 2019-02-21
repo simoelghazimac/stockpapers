@@ -1,5 +1,5 @@
 # StockPapers
-> Beautiful iOS wallpaers app
+> Beautiful iOS wallpapers app
 
 ### Index
 - [The idea behind](#The-idea-behind)
