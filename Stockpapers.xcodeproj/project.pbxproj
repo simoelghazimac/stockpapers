@@ -28,7 +28,6 @@
 		9A1927F221E6C05000F872C9 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1927E321E6C05000F872C9 /* FirebaseInstanceID.framework */; };
 		9A1927F321E6C05000F872C9 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1927E421E6C05000F872C9 /* GTMSessionFetcher.framework */; };
 		9A1927F421E6C05000F872C9 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1927E521E6C05000F872C9 /* FirebaseCore.framework */; };
-		9A1927F621E6C17800F872C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A1927F521E6C17800F872C9 /* GoogleService-Info.plist */; };
 		9A2B9358219F464500A52B78 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B9357219F464500A52B78 /* PreviewCell.swift */; };
 		9A3C64D621F934DD00FE21D4 /* DarkAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C64D521F934DD00FE21D4 /* DarkAlertController.swift */; };
 		9A3C64D921F9351300FE21D4 /* UIAlertController+AlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C64D821F9351300FE21D4 /* UIAlertController+AlertController+Extension.swift */; };
@@ -106,6 +105,8 @@
 		9AE14F8A21E964E50094EBFD /* BoringSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE14F8421E964E40094EBFD /* BoringSSL.framework */; };
 		9AE14F8B21E964E50094EBFD /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE14F8521E964E40094EBFD /* FirebaseFirestore.framework */; };
 		9AE14F9321E988340094EBFD /* UICollectionViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE14F9221E988340094EBFD /* UICollectionViewController+Extension.swift */; };
+		9AF968DB221EAACA00AAF3F7 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AF968DA221EAACA00AAF3F7 /* GoogleService-Info-Dev.plist */; };
+		9AF968DD221EABB200AAF3F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AF968DC221EABB100AAF3F7 /* GoogleService-Info.plist */; };
 		9AFFBC2B21A44E9000D09542 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFBC2921A44E9000D09542 /* IAPService.swift */; };
 		9AFFBC2C21A44E9000D09542 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFBC2A21A44E9000D09542 /* IAPProduct.swift */; };
 		9AFFBC2E21A450DB00D09542 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFBC2D21A450DB00D09542 /* StoreKit.framework */; };
@@ -154,7 +155,6 @@
 		9A1927E321E6C05000F872C9 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		9A1927E421E6C05000F872C9 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Carthage/Build/iOS/GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		9A1927E521E6C05000F872C9 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Carthage/Build/iOS/FirebaseCore.framework; sourceTree = "<group>"; };
-		9A1927F521E6C17800F872C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A2B9357219F464500A52B78 /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 		9A3C64D521F934DD00FE21D4 /* DarkAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkAlertController.swift; sourceTree = "<group>"; };
 		9A3C64D821F9351300FE21D4 /* UIAlertController+AlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertController+Extension.swift"; sourceTree = "<group>"; };
@@ -239,6 +239,8 @@
 		9AE14F8421E964E40094EBFD /* BoringSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoringSSL.framework; path = Carthage/Build/iOS/BoringSSL.framework; sourceTree = "<group>"; };
 		9AE14F8521E964E40094EBFD /* FirebaseFirestore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseFirestore.framework; path = Carthage/Build/iOS/FirebaseFirestore.framework; sourceTree = "<group>"; };
 		9AE14F9221E988340094EBFD /* UICollectionViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewController+Extension.swift"; sourceTree = "<group>"; };
+		9AF968DA221EAACA00AAF3F7 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-Dev.plist"; path = "Stockpapers/GoogleService-Info-Dev.plist"; sourceTree = SOURCE_ROOT; };
+		9AF968DC221EABB100AAF3F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9AFFBC2921A44E9000D09542 /* IAPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		9AFFBC2A21A44E9000D09542 /* IAPProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
 		9AFFBC2D21A450DB00D09542 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -573,9 +575,9 @@
 				9ACD75FB219997D100C14096 /* Subclasses */,
 				9ACD75E92198725400C14096 /* Helpers */,
 				9ACD75F221990AE700C14096 /* Views */,
+				9AF968D9221EAAB800AAF3F7 /* GoogleServices */,
 				9ADB6CE121986A76005E1F27 /* Assets.xcassets */,
 				9ADB6CE321986A76005E1F27 /* LaunchScreen.storyboard */,
-				9A1927F521E6C17800F872C9 /* GoogleService-Info.plist */,
 				9AD9731E21E7E38800CC569B /* RemoteConfigDefaults.plist */,
 				9ADB6CE621986A76005E1F27 /* Info.plist */,
 				9ADB6CDE21986A75005E1F27 /* StockPapers.xcdatamodeld */,
@@ -591,6 +593,15 @@
 				9ADB6CF121986A76005E1F27 /* Info.plist */,
 			);
 			path = StockpapersTests;
+			sourceTree = "<group>";
+		};
+		9AF968D9221EAAB800AAF3F7 /* GoogleServices */ = {
+			isa = PBXGroup;
+			children = (
+				9AF968DA221EAACA00AAF3F7 /* GoogleService-Info-Dev.plist */,
+				9AF968DC221EABB100AAF3F7 /* GoogleService-Info.plist */,
+			);
+			path = GoogleServices;
 			sourceTree = "<group>";
 		};
 		9AFFBC2821A44E9000D09542 /* IAP */ = {
@@ -722,7 +733,8 @@
 				9A61B60221FE5A22007E8665 /* gRPCCertificates.bundle in Resources */,
 				9ADB6CE221986A76005E1F27 /* Assets.xcassets in Resources */,
 				9AD9731F21E7E38800CC569B /* RemoteConfigDefaults.plist in Resources */,
-				9A1927F621E6C17800F872C9 /* GoogleService-Info.plist in Resources */,
+				9AF968DB221EAACA00AAF3F7 /* GoogleService-Info-Dev.plist in Resources */,
+				9AF968DD221EABB200AAF3F7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
