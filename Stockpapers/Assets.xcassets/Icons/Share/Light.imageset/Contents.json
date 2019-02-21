@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "LimitLight.png",
+      "filename" : "Bright.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "LimitLight@2x.png",
+      "filename" : "Bright@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "LimitLight@3x.png",
+      "filename" : "Bright@3x.png",
       "scale" : "3x"
     }
   ],

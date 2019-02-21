@@ -19,6 +19,7 @@ class FullScreenPictureVC: UIViewController {
     var downloadButton: UIButton = UIButton()
     var closeButton: UIButton = UIButton()
     var rotateBtn: UIButton = UIButton()
+    var shareButton: UIButton = UIButton()
     
     var photo: Unsplash.Photo!
     var indicator: CustomLoader = CustomLoader()
@@ -102,6 +103,7 @@ class FullScreenPictureVC: UIViewController {
         setupCloseBtn()
         setupRotateBtn()
         setupFavBtn()
+        setupShareButton()
         setupWatermark()
         
         watermark.setTitle("Shot by @\(photo.user.username)", for: .normal)
@@ -333,6 +335,58 @@ class FullScreenPictureVC: UIViewController {
     }
     
     
+    @objc func shareOnIGStories() {
+        let vc = ShareVC(style: .grouped)
+        vc.title = "Share"
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        let nav = UINavigationController(rootViewController: vc)
+        nav.navigationController?.view?.backgroundColor = .clear
+        nav.modalPresentationStyle = .overCurrentContext
+        nav.navigationBar.prefersLargeTitles = true
+        nav.navigationBar.barStyle = .blackTranslucent
+        
+        self.present(nav, animated: true)
+        
+//        if let data = self.container.image?.pngData() {
+//            self.shareOnInsta(data)
+//        }
+    }
+    
+    func shareOnInsta(_ backgroundImage: Data?) {
+        let url = URL(string: "instagram-stories://share")
+        
+        if url!.canBeOpened {
+            // Assign background image asset and attribution link URL to pasteboard
+            var pasteboardItems: [[String : Data?]]? = nil
+            if let backgroundImage = backgroundImage {
+                pasteboardItems = [
+                    [
+                        "com.instagram.sharedSticker.backgroundImage": backgroundImage
+                    ]
+                ]
+            }
+            
+            let pasteboardOptions = [
+                UIPasteboard.OptionsKey.expirationDate: Date().addingTimeInterval(60 * 5)
+            ]
+            
+            // This call is iOS 10+, can use 'setItems' depending on what versions you support
+            if let pasteboardItems = pasteboardItems {
+                UIPasteboard.general.setItems(pasteboardItems, options: pasteboardOptions)
+            }
+            
+            url?.open(completion: { (opened) in
+                if opened {
+                    print("URL OPENED")
+                } else {
+                    print("ERROR?")
+                }
+            })
+        }
+    }
+    
+    
     // Save the current wp
     @objc private func saveImage() {
         self.indicator.start()
@@ -470,12 +524,45 @@ class FullScreenPictureVC: UIViewController {
         favBtn.setImage(image, for: .normal)
     }
     
+    fileprivate func setupShareButton() {
+        shareButton.hide()
+        shareButton.accessibilityIdentifier = "shareButton"
+        
+        shareButton.addTarget(self, action: #selector(self.shareOnIGStories), for: .touchUpInside)
+        
+        view.addSubview(shareButton)
+        
+        shareButton.setConstraints([
+            shareButton.topAnchor.constraint(equalTo: favBtn.bottomAnchor, constant: 25),
+            shareButton.rightAnchor.constraint(equalTo: rotateBtn.rightAnchor)
+        ])
+        
+        shareButton.layoutIfNeeded()
+        
+        var image: UIImage!
+        if self.isFavourite() {
+            if self.lightUI(rotateBtn) {
+                image = Icons.shareButton.dark
+            } else {
+                image = Icons.shareButton.light
+            }
+        } else {
+            if self.lightUI(rotateBtn) {
+                image = Icons.shareButton.dark
+            } else {
+                image = Icons.shareButton.light
+            }
+        }
+        
+        shareButton.setImage(image, for: .normal)
+    }
+    
     
     fileprivate func setupRotateBtn() {
         rotateBtn.hide()
         rotateBtn.accessibilityIdentifier = "rotateButton"
         
-        rotateBtn.addTarget(self, action: #selector(self.rotateRight), for: .touchUpInside)
+        rotateBtn.addTarget(self, action: #selector(self.shareOnIGStories), for: .touchUpInside)
         
         view.addSubview(rotateBtn)
         
@@ -591,6 +678,8 @@ class FullScreenPictureVC: UIViewController {
         indicator.setupUI(in: container)
     }
     
+    
+    
     /*
      * -----------------------
      * MARK: - Utilities
@@ -603,6 +692,7 @@ class FullScreenPictureVC: UIViewController {
             self.closeButton.show()
             self.rotateBtn.show()
             self.favBtn.show()
+            self.shareButton.show()
         })
     }
     
@@ -612,6 +702,7 @@ class FullScreenPictureVC: UIViewController {
             self.closeButton.hide()
             self.rotateBtn.hide()
             self.favBtn.hide()
+            self.shareButton.hide()
         })
     }
     
@@ -663,3 +754,74 @@ extension FullScreenPictureVC: UIGestureRecognizerDelegate {
     }
 }
 
+
+
+
+class ShareVC: UITableViewController {
+    var blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+
+    override func viewDidLoad() {
+        self.tableView.backgroundColor = .clear
+        self.view.backgroundColor = .clear
+        self.tableView.backgroundView = blurView
+        
+        
+        self.title = "Share"
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Instagram"
+        case 1:
+            return "Facebook"
+        case 2:
+            return "Socials"
+        case 3:
+            return "Other"
+        default:
+            return ""
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 2
+        case 1:
+            return 2
+        case 2:
+            return 3
+        case 3:
+            return 1
+        default:
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = DarkTableViewCell(style: .value1, reuseIdentifier: "darktableviewcell-share")
+        
+        let texts: [ [String] ] = [
+            ["Instagram", "Instagram Stories"],
+            ["Facebook", "Facebook Stories"],
+            ["Twitter", "Snapchat", "Whatsapp"],
+            ["Copy to clipboard"]
+        ]
+        
+        cell.textLabel?.text = texts[indexPath.section][indexPath.row]
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = .clear
+        cell.tintColor = Theme.dark.accentColor
+        return cell;
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}

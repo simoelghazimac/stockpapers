@@ -114,6 +114,7 @@ struct Icons {
     static let rotate = Icon(name: "Rotate")
     static let downloadButton = UIImage(named: "downloadButton")
     static let favButton = Icon.Themed(name: "FavButton")
+    static let shareButton = Icon(name: "Share")
     
     
     struct Social {
